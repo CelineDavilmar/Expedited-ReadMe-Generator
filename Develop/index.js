@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
-const inquierer = require('inquirer');
+const inquirer = require('inquirer');
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -66,20 +67,26 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.log(err)
+        }
+        console.log('README generated')
+    })
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    try {
-        const answers = await inquirer.prompt(questions);
-        answers.licenseBadge = licenseBadge(answers.license);
-        let data = generateMarkdown(answers);
-        await writeFileAsync("created-README.md", data);
-    } catch (err) {
-        throw err;
-    }
+    inquirer.prompt(questions)
+        .then((inquirerResponse, data) => {
+            console.log("Making README");
+            writeToFile("README.md", inquirerResponse, data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 }
 
 // Function call to initialize app
 init();
+
