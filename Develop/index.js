@@ -32,7 +32,7 @@ const questions = [
     {
         type: 'input',
         message: "Please enter the installation instructions",
-        name: 'instructions',
+        name: 'installation',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid response is required.");
@@ -43,8 +43,8 @@ const questions = [
     {
         type: 'input',
         message: "Please enter the contribution guidelines",
-        name: 'guidlines',
-        default: 'guidlines',
+        name: 'contribution',
+        default: 'No Contribution Guidelines',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid response is required.");

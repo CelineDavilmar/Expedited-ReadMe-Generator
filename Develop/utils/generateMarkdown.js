@@ -43,27 +43,33 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
-  ## Table of Content
-  - [Description](#description)
-  - [Instructions](#instructions)
-  - [Guidlines](#guidlines)
-  - [Test](#test)
-  - [License](#license)
 
   ## Description
   ${data.description}
 
+  ## Table of Content
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Instructions](#instructions)
+  - [License](#license)
+  - [Guidlines](#guidlines)
+  - [Test](#test)
+  - [Questions](#questions)
+  
+
+  ##Installation
+  ${data.installation}
+
   ## Usage
   ${data.instructions}
 
-  ## Guidlines
-  ${data.guidlines}
+  ${renderLicenseSection(data.license)}
+
+  ## Contributions
+  ${data.contribution}
 
   ## Test
   ${data.test}
-
-  
-  ${renderLicenseSection(data.license)}
 
   ## Questions
   ### GitHub Profile
@@ -76,3 +82,5 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
+
+
