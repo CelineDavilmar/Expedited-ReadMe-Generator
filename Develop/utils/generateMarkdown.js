@@ -57,7 +57,7 @@ function generateMarkdown(data) {
   - [Questions](#questions)
   
 
-  ##Installation
+  ## Installation
   ${data.installation}
 
   ## Usage
@@ -73,10 +73,10 @@ function generateMarkdown(data) {
 
   ## Questions
   ### GitHub Profile
-  ${data.username}
+  - ${data.username}
 
   ### Please feel free to email me for any further questions or concerns
-  ${data.email}
+  - ${data.email}
 
 `;
 }
