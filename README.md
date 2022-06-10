@@ -1,3 +1,27 @@
 # Professional README Generator Starter Code
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## Description
+Created a node.js application that creates a readme from the terminal.
+
+## Built With
+ JavaScript
+
+## Video
+https://watch.screencastify.com/v/bBW1koJRcck0Rp6AwXSf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
