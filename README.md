@@ -7,7 +7,7 @@ Created a node.js application that creates a readme from the terminal.
  JavaScript
 
 ## Video
-https://watch.screencastify.com/v/bBW1koJRcck0Rp6AwXSf
+https://watch.screencastify.com/v/WPDVrLLJWHIQ5X8sMoA0
 
 
 
